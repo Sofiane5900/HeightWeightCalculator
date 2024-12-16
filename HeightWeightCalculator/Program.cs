@@ -17,9 +17,9 @@ internal class Program
         if (personHeight >= 145 && personHeight <= 160 && personWeight  >= 43 && personWeight <= 65)
         {
             Console.WriteLine("Prenez la taille 1\n");
-        } 
+        }
         // Si je fais entre 163cm et 165cm et que je pése entre 43kg et 59kg
-        else if(personHeight >= 163 && personHeight <= 165 && personWeight >= 43 && personWeight <= 59)
+        else if (personHeight >= 163 && personHeight <= 165 && personWeight >= 43 && personWeight <= 59)
         {
             Console.WriteLine("Prenez la taille 1\n");
         }
@@ -73,16 +73,19 @@ internal class Program
         {
             Console.WriteLine("Prenez la taille 3\n");
         }
+    
         // Si je fais entre 175cm et 177cm et que je pése entre 48kg et 58kg
         else if (personHeight >= 175 && personHeight <= 177 && personWeight >= 48 && personWeight <= 58)
         {
             Console.WriteLine("Prenez la taille 2\n");
         }
+
         // Si je fais entre 175cm et 177cm et que je pése entre 59kg et 64kg
         else if (personHeight >= 175 && personHeight <= 177 && personWeight >= 59 && personWeight <= 64)
         {
             Console.WriteLine("Prenez la taille 3\n");
         }
+
         // Si je fais entre 178cm et 182cm et que je pése entre 48kg et 53kg
         else if (personHeight >= 178 && personHeight <= 182 && personWeight >= 48 && personWeight <= 53)
         {
@@ -98,7 +101,38 @@ internal class Program
         {
             Console.WriteLine("Prenez la taille 3\n");
         }
+     
 
-        Console.WriteLine("Appuyer sur n'importe quel touche pour fermer le programme...");
+        
+        // Si je fais plus que 183cm ou moins 145cm ou que je pése plus que 77kg et moins que 43kg
+        if (personHeight > 183 || personHeight < 145 || personWeight > 77 || personWeight < 43)
+        {
+            Console.WriteLine("Aucune taille ne vous correspond\n");
+        }
+        // Si je fais entre 145cm et 160cm mais que je fais plus que 65kg
+       else if (personHeight >= 145 && personHeight <= 160 && personWeight > 65)
+        {
+            Console.WriteLine("Aucune taille ne vous correspond\n");
+        }
+        // Si je fais entre 163cm et 165cm et que je pense plus que 72kg
+        else if (personHeight >= 163 && personHeight <= 165 && personWeight > 71)
+        {
+            Console.WriteLine("Aucune taille ne vous correspond\n");
+        }
+        // Si je fais entre 172m et 182cm et que je pése moins que 48kg
+        else if (personHeight >= 172 && personHeight <= 182 && personWeight < 48)
+        {
+            Console.WriteLine("Aucune taille ne vous correspond\n");
+        }
+
+        // Si je fais entre 183cm et que je pése moins que 54kg
+        else if (personHeight == 183 && personWeight < 54)
+        {
+            Console.WriteLine("Aucune taille ne vous correspond\n");
+        }
+
+
+
+        Console.WriteLine("Appuyer sur n'importe quel ouche pour fermer le programme...");
     }
 }
